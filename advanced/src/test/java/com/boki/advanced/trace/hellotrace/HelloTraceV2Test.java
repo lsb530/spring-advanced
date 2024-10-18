@@ -2,15 +2,8 @@ package com.boki.advanced.trace.hellotrace;
 
 import com.boki.advanced.LoggingExtension;
 import com.boki.advanced.trace.TraceStatus;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.jupiter.api.extension.Extensions;
-import org.slf4j.Logger;
-import org.springframework.boot.logging.LogLevel;
-import org.springframework.boot.logging.LoggingSystem;
-import org.springframework.test.context.ActiveProfiles;
 
 @ExtendWith(LoggingExtension.class)
 class HelloTraceV2Test {
