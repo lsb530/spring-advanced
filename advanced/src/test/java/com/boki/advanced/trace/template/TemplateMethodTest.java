@@ -1,6 +1,7 @@
 package com.boki.advanced.trace.template;
 
 import com.boki.advanced.trace.template.code.*;
+import com.boki.advanced.trace.template.code.AbstractTemplate;
 import lombok.extern.slf4j.*;
 import org.junit.jupiter.api.*;
 
