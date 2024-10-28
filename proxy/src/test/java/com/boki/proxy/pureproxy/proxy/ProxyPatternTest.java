@@ -1,5 +1,6 @@
 package com.boki.proxy.pureproxy.proxy;
 
+import com.boki.proxy.pureproxy.proxy.code.CacheProxy;
 import com.boki.proxy.pureproxy.proxy.code.ProxyPatternClient;
 import com.boki.proxy.pureproxy.proxy.code.RealSubject;
 import org.junit.jupiter.api.Test;
@@ -14,4 +15,15 @@ public class ProxyPatternTest {
         client.execute();
         client.execute();
     }
+
+    @Test
+    void cacheProxyTest() {
+        RealSubject realSubject = new RealSubject();
+        CacheProxy cacheProxy = new CacheProxy(realSubject);
+        ProxyPatternClient client = new ProxyPatternClient(cacheProxy);
+        client.execute();
+        client.execute();
+        client.execute();
+    }
+
 }
