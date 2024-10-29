@@ -8,6 +8,7 @@ import com.boki.proxy.config.v2_dynamicproxy.DynamicProxyBasicConfig;
 import com.boki.proxy.config.v2_dynamicproxy.DynamicProxyFilterConfig;
 import com.boki.proxy.config.v3_proxyfactory.ProxyFactoryConfigV1;
 import com.boki.proxy.config.v3_proxyfactory.ProxyFactoryConfigV2;
+import com.boki.proxy.config.v4_postprocessor.BeanPostProcessorConfig;
 import com.boki.proxy.trace.logtrace.LogTrace;
 import com.boki.proxy.trace.logtrace.ThreadLocalLogTrace;
 import org.springframework.boot.SpringApplication;
@@ -22,8 +23,9 @@ import org.springframework.context.annotation.Import;
 //@Import(DynamicProxyBasicConfig.class)
 //@Import(DynamicProxyFilterConfig.class)
 //@Import(ProxyFactoryConfigV1.class)
-@Import(ProxyFactoryConfigV2.class)
-@SpringBootApplication(scanBasePackages = "com.boki.proxy.app.v3")
+//@Import(ProxyFactoryConfigV2.class)
+@Import(BeanPostProcessorConfig.class)
+@SpringBootApplication(scanBasePackages = "com.boki.proxy.app")
 public class ProxyApplication {
 
     public static void main(String[] args) {
