@@ -5,6 +5,7 @@ import com.boki.proxy.config.AppV2Config;
 import com.boki.proxy.config.v1_proxy.ConcreteProxyConfig;
 import com.boki.proxy.config.v1_proxy.InterfaceProxyConfig;
 import com.boki.proxy.config.v2_dynamicproxy.DynamicProxyBasicConfig;
+import com.boki.proxy.config.v2_dynamicproxy.DynamicProxyFilterConfig;
 import com.boki.proxy.trace.logtrace.LogTrace;
 import com.boki.proxy.trace.logtrace.ThreadLocalLogTrace;
 import org.springframework.boot.SpringApplication;
@@ -16,7 +17,8 @@ import org.springframework.context.annotation.Import;
 // config 패키지 하위의 Configuration들이 컴포넌트 스캔에 잡히지 않게 하기 위함
 //@Import(InterfaceProxyConfig.class)
 //@Import(ConcreteProxyConfig.class)
-@Import(DynamicProxyBasicConfig.class)
+//@Import(DynamicProxyBasicConfig.class)
+@Import(DynamicProxyFilterConfig.class)
 @SpringBootApplication(scanBasePackages = "com.boki.proxy.app.v3")
 public class ProxyApplication {
 
