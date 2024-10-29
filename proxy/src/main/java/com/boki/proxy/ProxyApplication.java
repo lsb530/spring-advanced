@@ -10,6 +10,7 @@ import com.boki.proxy.config.v3_proxyfactory.ProxyFactoryConfigV1;
 import com.boki.proxy.config.v3_proxyfactory.ProxyFactoryConfigV2;
 import com.boki.proxy.config.v4_postprocessor.BeanPostProcessorConfig;
 import com.boki.proxy.config.v5_autoproxy.AutoProxyConfig;
+import com.boki.proxy.config.v6_aop.AopConfig;
 import com.boki.proxy.trace.logtrace.LogTrace;
 import com.boki.proxy.trace.logtrace.ThreadLocalLogTrace;
 import org.springframework.boot.SpringApplication;
@@ -26,7 +27,8 @@ import org.springframework.context.annotation.Import;
 //@Import(ProxyFactoryConfigV1.class)
 //@Import(ProxyFactoryConfigV2.class)
 //@Import(BeanPostProcessorConfig.class)
-@Import(AutoProxyConfig.class)
+//@Import(AutoProxyConfig.class)
+@Import(AopConfig.class)
 @SpringBootApplication(scanBasePackages = "com.boki.proxy.app")
 public class ProxyApplication {
 
