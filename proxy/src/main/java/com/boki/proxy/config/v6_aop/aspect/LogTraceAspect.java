@@ -24,6 +24,11 @@ public class LogTraceAspect {
     public Object execute(ProceedingJoinPoint joinPoint) throws Throwable {
         // 어드바이스
         TraceStatus status = null;
+
+        log.info("target: {}", joinPoint.getTarget()); // 실제 호출 대상
+        log.info("getArgs: {}", joinPoint.getArgs()); // 전달인자
+        log.info("getSignature: {}", joinPoint.getSignature()); // jointPoint 시그니처
+
         try {
             String message = joinPoint.getSignature().toShortString();
             status = logTrace.begin(message);
