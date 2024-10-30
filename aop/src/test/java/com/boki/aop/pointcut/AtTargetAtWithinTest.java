@@ -58,6 +58,15 @@ public class AtTargetAtWithinTest {
     @Aspect
     static class AtTargetAtWithinAspect {
 
+        // 패키지 범위를 좁히지 않고 쓰면 오류 발생(final class에까지 AOP를 적용하려고 시도)
+        /*
+        @Around("@target(com.boki.aop.member.annotation.ClassAop) ")
+        public Object inValidAtTarget(ProceedingJoinPoint joinPoint) throws Throwable {
+            log.info("[@target] {}", joinPoint.getSignature());
+            return joinPoint.proceed();
+        }
+        */
+
         //@target: 인스턴스 기준으로 모든 메서드의 조인 포인트를 선정, 부모 타입의 메서드도 적용
         @Around("execution(* com.boki.aop..*(..)) && @target(com.boki.aop.member.annotation.ClassAop) ")
         public Object atTarget(ProceedingJoinPoint joinPoint) throws Throwable {
