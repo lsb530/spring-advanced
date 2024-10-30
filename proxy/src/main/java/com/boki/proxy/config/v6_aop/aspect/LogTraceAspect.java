@@ -9,7 +9,7 @@ import org.aspectj.lang.annotation.Aspect;
 
 
 @Slf4j
-@Aspect
+@Aspect // -> Advisor로 만들어줌 (AspectJ 내부의 빌더에 스프링 컨테이너가 뜨기 전에 저장)
 public class LogTraceAspect {
 
     private final LogTrace logTrace;
