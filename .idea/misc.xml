@@ -3,6 +3,7 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/advanced" />
+    <file type="web" url="file://$PROJECT_DIR$/aop" />
     <file type="web" url="file://$PROJECT_DIR$/proxy" />
   </component>
   <component name="ProjectRootManager">
